@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal Sayılar</title>
+</head>
+<body>
+    <script>
+        let ilkSayi= Number(prompt("Başlangıç değerini giriniz:"));
+        let sonSayi= Number(prompt("Bitiş değerini giriniz:"));
+        for(let i=ilkSayi; i<=sonSayi; i++){
+            let durum = 0;
+
+            for(let j=2; j<i; j++){
+                if(i%j ==0){
+                    durum=1;
+                    break;
+                }
+            }
+            if(i>1 && durum == 0){
+                document.write(i+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>
